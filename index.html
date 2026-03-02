@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>SuperCauchos - Promociones</title>
+    <title>SuperCauchos Tecnología - Promociones</title>
     <style>
         /* --- ESTILOS GENERALES --- */
         * {
@@ -101,6 +101,12 @@
             object-fit: contain;
         }
 
+        .brand-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
         /* --- CONTENIDO DESPLEGABLE --- */
         .dropdown-content {
             list-style-type: none;
@@ -118,7 +124,7 @@
         }
 
         .dropdown-content.show {
-            max-height: 600px;
+            max-height: 800px;
             opacity: 1;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -127,10 +133,10 @@
         .dropdown-content li {
             padding: 12px 0;
             color: #334155;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             border-bottom: 1px dashed #ddd;
             display: flex;
-            justify-content: space-between; /* Alinea nombre a la izquierda y precio a la derecha */
+            justify-content: space-between;
             align-items: flex-start;
             gap: 10px;
         }
@@ -143,6 +149,14 @@
             font-weight: bold;
             color: #e63946;
             white-space: nowrap;
+            text-align: right;
+        }
+
+        .price-label {
+            display: block;
+            font-size: 0.7rem;
+            color: #94a3b8;
+            font-weight: normal;
         }
 
         .dropdown-content li:last-child {
@@ -161,47 +175,106 @@
 
     <div class="container">
         <div class="banner">
-            <img src="banner%202.jpeg" alt="Banner" class="banner-img">
+            <img src="banner%201.png" alt="Banner" class="banner-img">
         </div>
 
         <div class="descripcion">
-            ¡Bienvenidos! Explora nuestras ofertas exclusivas en lubricantes.
+            ¡Bienvenidos! Explora nuestras ofertas exclusivas en cauchos de alta tecnología.
         </div>
 
         <div class="dropdown-section">
             <button class="dropdown-btn" onclick="toggleDropdown(this)">
-                <img src="BOTON%201.png" alt="Promo Motul">
+                <span class="brand-name">EVERTON</span>
             </button>
             <ul class="dropdown-content">
-                <li><span class="product-name">TAMBOR 15W40 SEMISINTETICO</span> <span class="product-price">$850</span></li>
-                <li><span class="product-name">SAE 15W40 API SP</span> <span class="product-price">$30</span></li>
-                <li><span class="product-name">MOTO 4T SAE 20W50 JASO MA2 API SL</span> <span class="product-price">$26</span></li>
-
-                
-
+                <li>
+                    <span class="product-name">295/80R22.5 MODELO EV600 DIRECCIONAL</span>
+                    <span class="product-price"><span class="price-label">Contado</span>$174</span>
+                </li>
             </ul>
         </div>
 
         <div class="dropdown-section">
             <button class="dropdown-btn" onclick="toggleDropdown(this)">
-                <img src="BOTON%202.png" alt="Promo Voltex">
+                <span class="brand-name">DOVROAD</span>
             </button>
             <ul class="dropdown-content">
-                <li><span class="product-name">4100 PROTECT 15W40 CAJA 12 X 1L SEMISINTETICO</span> <span class="product-price">$100</span></li>
-                <li><span class="product-name">5100 15W50 4T CAJA 12 X 1 L SEMISINTETICO</span> <span class="product-price">$124</span></li>
-                <li><span class="product-name">3000 20W50 4T (MINERAL) CAJA 12 X 1 LITRO</span> <span class="product-price">$100</span></li>
-                <li><span class="product-name">TEKMA MEGA X LD 15W40 20L SEMISINTETICO DIESEL</span> <span class="product-price">$145</span></li>
+                <li>
+                    <span class="product-name">295/80R22.5 MODELO DF182 DIRECCIONAL</span>
+                    <span class="product-price"><span class="price-label">Contado / Crédito</span>$185 / $200</span>
+                </li>
             </ul>
         </div>
 
         <div class="dropdown-section">
             <button class="dropdown-btn" onclick="toggleDropdown(this)">
-                <img src="BOTON%203.png" alt="Promo Mobil">
+                <span class="brand-name">AULICE</span>
             </button>
             <ul class="dropdown-content">
-                <li><span class="product-name">Mobil SUPER 1000 20W-50</span> <span class="product-price">$73</span></li>
-                <li><span class="product-name">Mobil DELVAC LEGEND 1350 SAE 50 PAILA</span> <span class="product-price">$110</span></li>
-                <li><span class="product-name">Mobil SUPER 2000 X1 10W-40</span> <span class="product-price">$87</span></li>
+                <li>
+                    <span class="product-name">295/80R22.5 MODELO AW767 DIRECCIONAL</span>
+                    <span class="product-price"><span class="price-label">Contado / Crédito</span>$195 / $210</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown-section">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                <span class="brand-name">ECOROAD</span>
+            </button>
+            <ul class="dropdown-content">
+                <li>
+                    <span class="product-name">295/80R22.5 DIRECCIONAL</span>
+                    <span class="product-price"><span class="price-label">Contado / Crédito</span>$200 / $215</span>
+                </li>
+                <li>
+                    <span class="product-name">315/80R22.5</span>
+                    <span class="product-price"><span class="price-label">Contado / Crédito</span>$205 / $220</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown-section">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                <span class="brand-name">MAZZINI</span>
+            </button>
+            <ul class="dropdown-content">
+                <li>
+                    <span class="product-name">315/80R22.5</span>
+                    <span class="product-price"><span class="price-label">Contado / Crédito</span>$200 / $215</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown-section">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                <span class="brand-name">BLACKARROW / GEM</span>
+            </button>
+            <ul class="dropdown-content">
+                <li>
+                    <span class="product-name">315/80R22.5 BLACKARROW</span>
+                    <span class="product-price"><span class="price-label">Contado / Crédito</span>$190 / $205</span>
+                </li>
+                <li>
+                    <span class="product-name">315/80R22.5 BLACK GEM</span>
+                    <span class="product-price"><span class="price-label">Contado / Crédito</span>$195 / $210</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown-section">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                <span class="brand-name">GASVIDO / BOSSWAY</span>
+            </button>
+            <ul class="dropdown-content">
+                <li>
+                    <span class="product-name">315/80R22.5 GASVIDO</span>
+                    <span class="product-price"><span class="price-label">Crédito</span>$240</span>
+                </li>
+                <li>
+                    <span class="product-name">315/80R22.5 BOSSWAY DIRECCIONAL</span>
+                    <span class="product-price"><span class="price-label">Crédito</span>$240</span>
+                </li>
             </ul>
         </div>
 
