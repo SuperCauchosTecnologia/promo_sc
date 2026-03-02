@@ -67,7 +67,7 @@
             border-left: 5px solid #e63946;
         }
 
-        /* --- BOTONES DE IMAGEN --- */
+        /* --- BOTONES DE MARCA --- */
         .dropdown-section {
             margin-bottom: 10px;
             width: 100%;
@@ -94,17 +94,11 @@
             background: #fffcfc;
         }
 
-        .dropdown-btn img {
-            height: 60px;
-            width: auto;
-            display: block;
-            object-fit: contain;
-        }
-
         .brand-name {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             color: #2c3e50;
+            text-transform: uppercase;
         }
 
         /* --- CONTENIDO DESPLEGABLE --- */
@@ -124,7 +118,7 @@
         }
 
         .dropdown-content.show {
-            max-height: 800px;
+            max-height: 400px;
             opacity: 1;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -179,7 +173,7 @@
         </div>
 
         <div class="descripcion">
-            ¡Bienvenidos! Explora nuestras ofertas exclusivas en cauchos.
+            ¡Bienvenidos! Selecciona una marca para ver las medidas y precios disponibles (Contado / Crédito).
         </div>
 
         <div class="dropdown-section">
@@ -188,7 +182,7 @@
             </button>
             <ul class="dropdown-content">
                 <li>
-                    <span class="product-name">295/80R22.5 MODELO EV600 DIRECCIONAL</span>
+                    <span class="product-name">295/80R22.5 EV600 DIRECCIONAL</span>
                     <span class="product-price"><span class="price-label">Contado</span>$174</span>
                 </li>
             </ul>
@@ -200,7 +194,7 @@
             </button>
             <ul class="dropdown-content">
                 <li>
-                    <span class="product-name">295/80R22.5 MODELO DF182 DIRECCIONAL</span>
+                    <span class="product-name">295/80R22.5 DF182 DIRECCIONAL</span>
                     <span class="product-price"><span class="price-label">Contado / Crédito</span>$185 / $200</span>
                 </li>
             </ul>
@@ -212,8 +206,20 @@
             </button>
             <ul class="dropdown-content">
                 <li>
-                    <span class="product-name">295/80R22.5 MODELO AW767 DIRECCIONAL</span>
+                    <span class="product-name">295/80R22.5 AW767 DIRECCIONAL</span>
                     <span class="product-price"><span class="price-label">Contado / Crédito</span>$195 / $210</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown-section">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                <span class="brand-name">WELLPLUS</span>
+            </button>
+            <ul class="dropdown-content">
+                <li>
+                    <span class="product-name">295/80R22.5 DIRECCIONAL</span>
+                    <span class="product-price"><span class="price-label">Contado / Crédito</span>$190 / $205</span>
                 </li>
             </ul>
         </div>
@@ -236,6 +242,18 @@
 
         <div class="dropdown-section">
             <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                <span class="brand-name">BLACKARROW</span>
+            </button>
+            <ul class="dropdown-content">
+                <li>
+                    <span class="product-name">315/80R22.5</span>
+                    <span class="product-price"><span class="price-label">Contado / Crédito</span>$190 / $205</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown-section">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
                 <span class="brand-name">MAZZINI</span>
             </button>
             <ul class="dropdown-content">
@@ -248,15 +266,11 @@
 
         <div class="dropdown-section">
             <button class="dropdown-btn" onclick="toggleDropdown(this)">
-                <span class="brand-name">BLACKARROW / GEM</span>
+                <span class="brand-name">BLACK GEM</span>
             </button>
             <ul class="dropdown-content">
                 <li>
-                    <span class="product-name">315/80R22.5 BLACKARROW</span>
-                    <span class="product-price"><span class="price-label">Contado / Crédito</span>$190 / $205</span>
-                </li>
-                <li>
-                    <span class="product-name">315/80R22.5 BLACK GEM</span>
+                    <span class="product-name">315/80R22.5</span>
                     <span class="product-price"><span class="price-label">Contado / Crédito</span>$195 / $210</span>
                 </li>
             </ul>
@@ -264,15 +278,23 @@
 
         <div class="dropdown-section">
             <button class="dropdown-btn" onclick="toggleDropdown(this)">
-                <span class="brand-name">GASVIDO / BOSSWAY</span>
+                <span class="brand-name">GASVIDO</span>
             </button>
             <ul class="dropdown-content">
                 <li>
-                    <span class="product-name">315/80R22.5 GASVIDO</span>
+                    <span class="product-name">315/80R22.5</span>
                     <span class="product-price"><span class="price-label">Crédito</span>$240</span>
                 </li>
+            </ul>
+        </div>
+
+        <div class="dropdown-section">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                <span class="brand-name">BOSSWAY</span>
+            </button>
+            <ul class="dropdown-content">
                 <li>
-                    <span class="product-name">315/80R22.5 BOSSWAY DIRECCIONAL</span>
+                    <span class="product-name">315/80R22.5 DIRECCIONAL</span>
                     <span class="product-price"><span class="price-label">Crédito</span>$240</span>
                 </li>
             </ul>
