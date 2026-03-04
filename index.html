@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>SuperCauchos - Promociones</title>
+    <title>SuperCauchos - Catálogo de Promociones</title>
     <style>
         /* --- ESTILOS GENERALES --- */
         * {
@@ -54,7 +54,6 @@
             display: block;
         }
 
-        /* --- DESCRIPCIÓN --- */
         .descripcion {
             background: #f0f4ff;
             padding: 18px;
@@ -67,9 +66,9 @@
             border-left: 5px solid #e63946;
         }
 
-        /* --- BOTONES DE MARCA --- */
+        /* --- BOTONES DE CATEGORÍA --- */
         .dropdown-section {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             width: 100%;
         }
 
@@ -77,7 +76,7 @@
             width: 100%;
             background: #e63946;
             border: 2px solid #000000;
-            padding: 15px;
+            padding: 16px;
             cursor: pointer;
             outline: none;
             border-radius: 15px;
@@ -95,11 +94,12 @@
         }
 
         .brand-name {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             font-weight: bold;
             color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            text-align: center;
         }
 
         /* --- CONTENIDO DESPLEGABLE --- */
@@ -119,7 +119,7 @@
         }
 
         .dropdown-content.show {
-            max-height: 800px;
+            max-height: 1200px;
             opacity: 1;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -128,16 +128,17 @@
         .dropdown-content li {
             padding: 12px 0;
             color: #334155;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             border-bottom: 1px dashed #ddd;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
             gap: 10px;
         }
 
         .product-name {
             flex: 1;
+            font-weight: 500;
         }
 
         .product-price {
@@ -145,11 +146,12 @@
             color: #e63946;
             white-space: nowrap;
             text-align: right;
+            font-size: 0.95rem;
         }
 
         .price-label {
             display: block;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: #94a3b8;
             font-weight: normal;
         }
@@ -192,7 +194,7 @@
         }
 
         .lorenzo-logo {
-            width: 50px; /* Logo de Lorenzo más grande como pediste */
+            width: 55px;
             height: auto;
             margin-right: 12px;
             border-radius: 50%;
@@ -217,61 +219,83 @@
 
     <div class="container">
         <div class="banner">
-            <img src="banner%202.jpeg" alt="Banner" class="banner-img">
+            <img src="banner%202.jpeg" alt="Banner SuperCauchos" class="banner-img">
         </div>
 
         <div class="descripcion">
-            ¡Bienvenidos! Explora nuestras ofertas exclusivas en Cauchos, Baterías y Lubricantes.
+            ¡Bienvenidos! Explore nuestro catálogo actualizado de ofertas especiales.
         </div>
 
         <div class="dropdown-section">
             <button class="dropdown-btn" onclick="toggleDropdown(this)">
-                <span class="brand-name">CAUCHOS 295/80R22.5</span>
+                <span class="brand-name">295/80R22.5 CAUCHOS CONTADO</span>
             </button>
             <ul class="dropdown-content">
-                <li><span class="product-name">EVERTON EV600 DIRECCIONAL</span> <span class="product-price"><span class="price-label">Contado</span>$174</span></li>
-                <li><span class="product-name">DOVROAD DF182 DIRECCIONAL</span> <span class="product-price"><span class="price-label">Contado</span>$185</span></li>
-                <li><span class="product-name">AULICE AW767 DIRECCIONAL</span> <span class="product-price"><span class="price-label">Contado</span>$195</span></li>
+                <li><span class="product-name">EVERTON MODELO EV600 DIRECCIONAL</span> <span class="product-price"><span class="price-label">Contado</span>$174</span></li>
+                <li><span class="product-name">DOVROAD MODELO DF182 DIRECCIONAL</span> <span class="product-price"><span class="price-label">Contado</span>$185</span></li>
+                <li><span class="product-name">AULICE MODELO AW767 DIRECCIONAL</span> <span class="product-price"><span class="price-label">Contado</span>$195</span></li>
                 <li><span class="product-name">WELLPLUS DIRECCIONAL</span> <span class="product-price"><span class="price-label">Contado</span>$190</span></li>
                 <li><span class="product-name">ECOROAD MODELO A-102</span> <span class="product-price"><span class="price-label">Contado</span>$200</span></li>
-                <li><span class="product-name">BF GOODRICH ST250</span> <span class="product-price"><span class="price-label">Contado</span>$450</span></li>
             </ul>
         </div>
 
         <div class="dropdown-section">
             <button class="dropdown-btn" onclick="toggleDropdown(this)">
-                <span class="brand-name">CAUCHOS 315/80R22.5</span>
+                <span class="brand-name">315/80R22.5 CAUCHOS CONTADO</span>
             </button>
             <ul class="dropdown-content">
-                <li><span class="product-name">BLACKARROW BA98A</span> <span class="product-price"><span class="price-label">Contado</span>$190</span></li>
+                <li><span class="product-name">BLACKRROW MODELO BA98A</span> <span class="product-price"><span class="price-label">Contado</span>$190</span></li>
                 <li><span class="product-name">MAZZINI</span> <span class="product-price"><span class="price-label">Contado</span>$200</span></li>
                 <li><span class="product-name">ECOROAD SUPER A106</span> <span class="product-price"><span class="price-label">Contado</span>$205</span></li>
                 <li><span class="product-name">BLACK GEM</span> <span class="product-price"><span class="price-label">Contado</span>$195</span></li>
-                <li><span class="product-name">GASVIDO</span> <span class="product-price"><span class="price-label">Crédito</span>$240</span></li>
-                <li><span class="product-name">BOSSWAY DIRECCIONAL</span> <span class="product-price"><span class="price-label">Crédito</span>$240</span></li>
             </ul>
         </div>
 
         <div class="dropdown-section">
             <button class="dropdown-btn" onclick="toggleDropdown(this)">
-                <span class="brand-name">BATERÍAS LTH / DURACELL</span>
+                <span class="brand-name">ANNAITE / HAOHUA</span>
             </button>
             <ul class="dropdown-content">
-                <li><span class="product-name">LTH 31T-750 (1350) AMP TORNILLO</span> <span class="product-price"><span class="price-label">Garantía</span>12 Meses</span></li>
-                <li><span class="product-name">LTH 31-670 (1100) AMP BORNE</span> <span class="product-price"><span class="price-label">Garantía</span>12 Meses</span></li>
-                <li><span class="product-name">DURACELL 31-1300S AMP TORNILLO</span> <span class="product-price"><span class="price-label">Garantía</span>15 Meses</span></li>
-                <li><span class="product-name">DURACELL 31-1300P AMP BORNE</span> <span class="product-price"><span class="price-label">Garantía</span>15 Meses</span></li>
+                <li><span class="product-name">ANNAITE 366 (295/80R22.5)</span> <span class="product-price"><span class="price-label">Crédito 30D</span>$279</span></li>
+                <li><span class="product-name">ANNAITE 366 (12R22.5)</span> <span class="product-price">Consultar</span></li>
+                <li><span class="product-name">ANNAITE 300 MIXTO (12R22.5)</span> <span class="product-price">Consultar</span></li>
+                <li><span class="product-name">ANNAITE 366 (315/80R22.5)</span> <span class="product-price">Consultar</span></li>
+                <li><span class="product-name">HAOHUA TRACCION GD18L (295/80R22.5)</span> <span class="product-price">Consultar</span></li>
+                <li><span class="product-name">HAOHUA TRACCION GD01 (315/80R22.5)</span> <span class="product-price">Consultar</span></li>
             </ul>
         </div>
 
         <div class="dropdown-section">
             <button class="dropdown-btn" onclick="toggleDropdown(this)">
-                <span class="brand-name">PROMO MOTUL (CAJAS)</span>
+                <span class="brand-name">CONTINENTAL / BF GOODRICH</span>
             </button>
             <ul class="dropdown-content">
-                <li><span class="product-name">4100 PROTECT 15W40 (12X1L)</span> <span class="product-price">$100</span></li>
-                <li><span class="product-name">5100 15W50 4T (12X1L)</span> <span class="product-price">$124</span></li>
-                <li><span class="product-name">3000 20W50 4T (12X1L)</span> <span class="product-price">$100</span></li>
+                <li><span class="product-name">BF GOODRICH ST250 (295/80R22.5)</span> <span class="product-price"><span class="price-label">Crédito 30D</span>$450</span></li>
+                <li><span class="product-name">CONTINENTAL HDR2 TRACCION</span> <span class="product-price">Consultar</span></li>
+                <li><span class="product-name">CONTINENTAL HSR3 DIRECCIONAL</span> <span class="product-price">Consultar</span></li>
+            </ul>
+        </div>
+
+        <div class="dropdown-section">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                <span class="brand-name">BATERÍAS (LTH / DURACELL)</span>
+            </button>
+            <ul class="dropdown-content">
+                <li><span class="product-name">LTH TORNILLO 31T-750 (1350) AMP</span> <span class="product-price"><span class="price-label">Garantía</span>12 Meses</span></li>
+                <li><span class="product-name">LTH BORNE 31-670 (1100) AMP</span> <span class="product-price"><span class="price-label">Garantía</span>12 Meses</span></li>
+                <li><span class="product-name">DURACELL TORNILLO 31-1300S AMP</span> <span class="product-price"><span class="price-label">Garantía</span>15 Meses</span></li>
+                <li><span class="product-name">DURACELL BORNE 31-1300P AMP</span> <span class="product-price"><span class="price-label">Garantía</span>15 Meses</span></li>
+            </ul>
+        </div>
+
+        <div class="dropdown-section">
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">
+                <span class="brand-name">PROMO MOTUL</span>
+            </button>
+            <ul class="dropdown-content">
+                <li><span class="product-name">4100 PROTECT 15W40 (12 X 1L)</span> <span class="product-price">$100</span></li>
+                <li><span class="product-name">5100 15W50 4T (12 X 1L)</span> <span class="product-price">$124</span></li>
+                <li><span class="product-name">3000 20W50 4T (12 X 1L)</span> <span class="product-price">$100</span></li>
                 <li><span class="product-name">TEKMA MEGA X LD 15W40 (20L)</span> <span class="product-price">$145</span></li>
             </ul>
         </div>
@@ -301,8 +325,8 @@
         <div class="contact-lorenzo">
             <p class="contact-text">Comunícate con Lorenzo Online</p>
             <a href="https://wa.me/584245684204" class="whatsapp-btn" target="_blank">
-                <img src="lorenzo.png" alt="Lorenzo" class="lorenzo-logo">
-                Realizar Pedido
+                <img src="lorenzo.png" alt="Logo Lorenzo" class="lorenzo-logo">
+                Pedido por WhatsApp
                 <svg class="ws-icon" viewBox="0 0 448 512">
                     <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.5-27.4-16.4-14.6-27.5-32.7-30.7-38.2-3.2-5.6-.3-8.6 2.5-11.3 2.5-2.5 5.6-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.6-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
                 </svg>
@@ -328,6 +352,7 @@
             content.classList.toggle('show');
         }
 
+        // Cerrar al hacer clic fuera
         document.addEventListener('click', function(event) {
             if (!event.target.closest('.dropdown-section')) {
                 document.querySelectorAll('.dropdown-content').forEach(content => {
