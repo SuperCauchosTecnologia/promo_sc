@@ -167,7 +167,6 @@
                 <span class="brand-name">295/80R22.5 PROMOCIÓN DE CAUCHOS CONTADO</span>
             </button>
             <ul class="dropdown-content">
- 
                 <li class="item-row">
                     <div class="item-main">
                         <span class="product-name">DOVROAD MODELO DF182 DIRECCIONAL</span>
@@ -232,6 +231,20 @@
                     </div>
                     <span class="specs">Steel Plies: 4+1</span>
                 </li>
+                <li class="item-row">
+                    <div class="item-main">
+                        <span class="product-name">GASVIDO</span>
+                        <div class="prices"><span class="price-val">Consultar</span></div>
+                    </div>
+                    <span class="specs">Steel Plies: 4+1</span>
+                </li>
+                <li class="item-row">
+                    <div class="item-main">
+                        <span class="product-name">BOSSWAY DIRECCIONAL</span>
+                        <div class="prices"><span class="price-val">Consultar</span></div>
+                    </div>
+                    <span class="specs">Steel Plies: 3+1</span>
+                </li>
             </ul>
         </div>
 
@@ -295,11 +308,7 @@
         function toggle(btn) {
             const content = btn.nextElementSibling;
             const isOpen = content.classList.contains('show');
-            
-            // Cerrar otros abiertos
             document.querySelectorAll('.dropdown-content').forEach(c => c.classList.remove('show'));
-            
-            // Abrir el seleccionado
             if (!isOpen) content.classList.add('show');
         }
     </script>
