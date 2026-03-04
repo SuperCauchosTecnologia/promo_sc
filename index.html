@@ -3,47 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>SuperCauchos - Catálogo Completo</title>
+    <title>SuperCauchos - Catálogo de Promociones</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: #f5f7fa; display: flex; justify-content: center; padding: 20px 10px; }
-        .container { width: 100%; max-width: 500px; background: white; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden; padding-bottom: 30px; }
+        /* --- ESTILOS GENERALES --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
-        .banner { background: #2c3e50; margin-bottom: 20px; overflow: hidden; }
+        body { 
+            background: #f5f7fa; 
+            display: flex; 
+            justify-content: center; 
+            padding: 20px 10px; 
+        }
+
+        .container { 
+            width: 100%; 
+            max-width: 600px; /* Diseño menos estrecho */
+            background: white; 
+            border-radius: 30px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+            padding-bottom: 30px; 
+        }
+        
+        /* --- BANNER Y BIENVENIDA --- */
+        .banner { background: #2c3e50; margin-bottom: 10px; overflow: hidden; }
         .banner-img { width: 100%; height: auto; display: block; }
 
-        .info-box { background: #eef2f7; margin: 0 20px 20px; padding: 15px; border-radius: 15px; border-left: 5px solid #2c3e50; font-size: 0.85rem; color: #444; }
+        .welcome-msg {
+            padding: 15px 25px;
+            text-align: center;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .info-box { 
+            background: #f0f4ff; 
+            margin: 10px 20px 20px; 
+            padding: 15px; 
+            border-radius: 15px; 
+            border-left: 5px solid #2c3e50; 
+            font-size: 0.85rem; 
+            color: #444; 
+        }
         .info-box h4 { color: #2c3e50; margin-bottom: 5px; text-transform: uppercase; }
 
-        .dropdown-section { margin: 0 20px 10px; }
+        /* --- BOTONES DE CATEGORÍA --- */
+        .dropdown-section { margin: 0 20px 12px; }
+        
         .dropdown-btn { 
-            width: 100%; background: #e63946; border: 2px solid #000; padding: 16px; 
-            cursor: pointer; border-radius: 15px; display: flex; justify-content: center; 
-            transition: 0.3s; -webkit-tap-highlight-color: transparent;
+            width: 100%; 
+            background: #e63946; 
+            border: 2px solid #000; 
+            padding: 16px; 
+            cursor: pointer; 
+            border-radius: 15px; 
+            display: flex; 
+            justify-content: center; 
+            transition: 0.3s; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            -webkit-tap-highlight-color: transparent;
         }
-        .dropdown-btn:hover { background: #c12e3a; }
-        .brand-name { font-size: 0.9rem; font-weight: bold; color: #fff; text-transform: uppercase; text-align: center; }
+        
+        .dropdown-btn:hover { background: #c12e3a; transform: translateY(-2px); }
+        
+        .brand-name { 
+            font-size: 0.95rem; 
+            font-weight: bold; 
+            color: #fff; 
+            text-transform: uppercase; 
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
 
+        /* --- CONTENIDO --- */
         .dropdown-content { 
-            list-style: none; padding: 0 15px; background: #fff; border: 1px solid #eee; 
-            border-top: none; margin-top: -5px; max-height: 0; opacity: 0; overflow: hidden; transition: 0.4s; 
+            list-style: none; 
+            padding: 0 15px; 
+            background: #fff; 
+            border: 1px solid #eee; 
+            border-top: none; 
+            margin-top: -5px; 
+            max-height: 0; 
+            opacity: 0; 
+            overflow: hidden; 
+            transition: 0.4s ease-out; 
         }
-        .dropdown-content.show { max-height: 2000px; opacity: 1; padding: 20px 15px; border-radius: 0 0 15px 15px; }
 
-        .item-row { padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; flex-direction: column; gap: 4px; }
-        .item-main { display: flex; justify-content: space-between; align-items: flex-start; }
-        .product-name { font-size: 0.85rem; font-weight: 600; color: #333; flex: 1; padding-right: 10px; }
-        .prices { text-align: right; display: flex; flex-direction: column; }
-        .price-val { font-weight: bold; color: #e63946; font-size: 0.95rem; }
-        .price-label { font-size: 0.65rem; color: #888; text-transform: uppercase; }
-        .specs { font-size: 0.7rem; color: #666; font-style: italic; }
+        .dropdown-content.show { 
+            max-height: 2000px; 
+            opacity: 1; 
+            padding: 20px 15px; 
+            border-radius: 0 0 15px 15px; 
+        }
 
-        .contact-lorenzo { margin: 30px 20px 0; text-align: center; background: #f9f9f9; padding: 20px; border-radius: 20px; border: 1px solid #eee; }
+        .item-row { 
+            padding: 12px 0; 
+            border-bottom: 1px solid #f0f0f0; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 4px; 
+        }
+        .item-main { display: flex; justify-content: space-between; align-items: center; }
+        
+        .product-name { font-size: 0.9rem; font-weight: 600; color: #333; flex: 1; padding-right: 10px; }
+        .price-val { font-weight: 800; color: #e63946; font-size: 1.05rem; white-space: nowrap; }
+        .price-label { font-size: 0.65rem; color: #888; text-transform: uppercase; display: block; text-align: right; }
+        .specs { font-size: 0.75rem; color: #666; font-style: italic; margin-top: 2px; }
+
+        /* --- SECCIÓN CONTACTO --- */
+        .contact-lorenzo { 
+            margin: 30px 20px 0; 
+            text-align: center; 
+            background: #f9f9f9; 
+            padding: 25px; 
+            border-radius: 20px; 
+            border: 1px solid #eee; 
+        }
+
         .whatsapp-btn { 
-            display: inline-flex; align-items: center; background: #25d366; color: white; 
-            text-decoration: none; padding: 12px 20px; border-radius: 50px; font-weight: bold; margin-top: 10px;
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center;
+            background: #25d366; 
+            color: white; 
+            text-decoration: none; 
+            padding: 14px 25px; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+            transition: 0.3s;
         }
-        .lorenzo-logo { width: 45px; margin-right: 10px; border-radius: 50%; }
+
+        .whatsapp-btn:hover { background: #128c7e; transform: scale(1.05); }
+
+        .lorenzo-logo { width: 50px; height: 50px; margin-right: 12px; border-radius: 50%; border: 2px solid white; }
+        
+        .ws-icon { width: 22px; height: 22px; fill: currentColor; margin-left: 8px; }
+
     </style>
 </head>
 <body>
@@ -51,6 +150,11 @@
     <div class="container">
         <div class="banner">
             <img src="banner%202.jpeg" alt="SuperCauchos" class="banner-img">
+        </div>
+
+        <div class="welcome-msg">
+            ¡Bienvenidos a nuestras promociones especiales! <br>
+            <strong>Calidad y durabilidad garantizada para su vehículo.</strong>
         </div>
 
         <div class="info-box">
@@ -72,40 +176,28 @@
                 <li class="item-row">
                     <div class="item-main">
                         <span class="product-name">DOVROAD MODELO DF182 DIRECCIONAL</span>
-                        <div class="prices">
-                            <span class="price-label">Contado</span><span class="price-val">$185</span>
-                            <span class="price-label">Crédito</span><span class="price-val">$200</span>
-                        </div>
+                        <div class="prices"><span class="price-label">Contado</span><span class="price-val">$185</span></div>
                     </div>
                     <span class="specs">Steel Plies: 4+1</span>
                 </li>
                 <li class="item-row">
                     <div class="item-main">
                         <span class="product-name">AULICE MODELO AW767 DIRECCIONAL</span>
-                        <div class="prices">
-                            <span class="price-label">Contado</span><span class="price-val">$195</span>
-                            <span class="price-label">Crédito</span><span class="price-val">$210</span>
-                        </div>
+                        <div class="prices"><span class="price-label">Contado</span><span class="price-val">$195</span></div>
                     </div>
                     <span class="specs">Steel Plies: 4+1</span>
                 </li>
                 <li class="item-row">
                     <div class="item-main">
                         <span class="product-name">WELLPLUS DIRECCIONAL</span>
-                        <div class="prices">
-                            <span class="price-label">Contado</span><span class="price-val">$190</span>
-                            <span class="price-label">Crédito</span><span class="price-val">$205</span>
-                        </div>
+                        <div class="prices"><span class="price-label">Contado</span><span class="price-val">$190</span></div>
                     </div>
                     <span class="specs">Steel Plies: 4+1</span>
                 </li>
                 <li class="item-row">
                     <div class="item-main">
                         <span class="product-name">ECOROAD MODELO A-102 (DIRECCIONAL)</span>
-                        <div class="prices">
-                            <span class="price-label">Contado</span><span class="price-val">$200</span>
-                            <span class="price-label">Crédito</span><span class="price-val">$215</span>
-                        </div>
+                        <div class="prices"><span class="price-label">Contado</span><span class="price-val">$200</span></div>
                     </div>
                     <span class="specs">Steel Plies: 4+1</span>
                 </li>
@@ -120,56 +212,30 @@
                 <li class="item-row">
                     <div class="item-main">
                         <span class="product-name">BLACKRROW MODELO BA98A</span>
-                        <div class="prices">
-                            <span class="price-label">Contado</span><span class="price-val">$190</span>
-                            <span class="price-label">Crédito</span><span class="price-val">$205</span>
-                        </div>
+                        <div class="prices"><span class="price-label">Contado</span><span class="price-val">$190</span></div>
                     </div>
                     <span class="specs">Steel Plies: 4+1</span>
                 </li>
                 <li class="item-row">
                     <div class="item-main">
                         <span class="product-name">MAZZINI</span>
-                        <div class="prices">
-                            <span class="price-label">Contado</span><span class="price-val">$200</span>
-                            <span class="price-label">Crédito</span><span class="price-val">$215</span>
-                        </div>
+                        <div class="prices"><span class="price-label">Contado</span><span class="price-val">$200</span></div>
                     </div>
                     <span class="specs">Steel Plies: 4+1</span>
                 </li>
                 <li class="item-row">
                     <div class="item-main">
                         <span class="product-name">ECOROAD SUPER A106</span>
-                        <div class="prices">
-                            <span class="price-label">Contado</span><span class="price-val">$205</span>
-                            <span class="price-label">Crédito</span><span class="price-val">$220</span>
-                        </div>
+                        <div class="prices"><span class="price-label">Contado</span><span class="price-val">$205</span></div>
                     </div>
                     <span class="specs">Steel Plies: 4+1</span>
                 </li>
                 <li class="item-row">
                     <div class="item-main">
                         <span class="product-name">BLACK GEM</span>
-                        <div class="prices">
-                            <span class="price-label">Contado</span><span class="price-val">$195</span>
-                            <span class="price-label">Crédito</span><span class="price-val">$210</span>
-                        </div>
+                        <div class="prices"><span class="price-label">Contado</span><span class="price-val">$195</span></div>
                     </div>
                     <span class="specs">Steel Plies: 4+1</span>
-                </li>
-                <li class="item-row">
-                    <div class="item-main">
-                        <span class="product-name">GASVIDO</span>
-                        <div class="prices"><span class="price-label">Crédito 30D</span><span class="price-val">$240</span></div>
-                    </div>
-                    <span class="specs">Steel Plies: 4+1</span>
-                </li>
-                <li class="item-row">
-                    <div class="item-main">
-                        <span class="product-name">BOSSWAY DIRECCIONAL</span>
-                        <div class="prices"><span class="price-label">Crédito 30D</span><span class="price-val">$240</span></div>
-                    </div>
-                    <span class="specs">Steel Plies: 3+1</span>
                 </li>
             </ul>
         </div>
@@ -218,45 +284,14 @@
             </ul>
         </div>
 
-        <div class="dropdown-section">
-            <button class="dropdown-btn" onclick="toggle(this)">
-                <span class="brand-name">PROMO MOTUL</span>
-            </button>
-            <ul class="dropdown-content">
-                <li class="item-row"><div class="item-main"><span class="product-name">4100 PROTECT 15W40 CAJA 12 X 1L SEMISINTETICO</span><span class="price-val">$100</span></div></li>
-                <li class="item-row"><div class="item-main"><span class="product-name">5100 15W50 4T CAJA 12 X 1 L SEMISINTETICO</span><span class="price-val">$124</span></div></li>
-                <li class="item-row"><div class="item-main"><span class="product-name">3000 20W50 4T (MINERAL) CAJA 12 X 1 LITRO</span><span class="price-val">$100</span></div></li>
-                <li class="item-row"><div class="item-main"><span class="product-name">TEKMA MEGA X LD 15W40 20L SEMISINTETICO DIESEL</span><span class="price-val">$145</span></div></li>
-            </ul>
-        </div>
-
-        <div class="dropdown-section">
-            <button class="dropdown-btn" onclick="toggle(this)">
-                <span class="brand-name">PROMO VOLTEX</span>
-            </button>
-            <ul class="dropdown-content">
-                <li class="item-row"><div class="item-main"><span class="product-name">TAMBOR 15W40 SEMISINTETICO</span><span class="price-val">$850</span></div></li>
-                <li class="item-row"><div class="item-main"><span class="product-name">SAE 15W40 API SP</span><span class="price-val">$30</span></div></li>
-                <li class="item-row"><div class="item-main"><span class="product-name">MOTO 4T SAE 20W50 JASO MA2 API SL</span><span class="price-val">$26</span></div></li>
-            </ul>
-        </div>
-
-        <div class="dropdown-section">
-            <button class="dropdown-btn" onclick="toggle(this)">
-                <span class="brand-name">PROMO MOBIL</span>
-            </button>
-            <ul class="dropdown-content">
-                <li class="item-row"><div class="item-main"><span class="product-name">Mobil SUPER 1000 20W-50</span><span class="price-val">$73</span></div></li>
-                <li class="item-row"><div class="item-main"><span class="product-name">Mobil DELVAC LEGEND 1350 SAE 50 PAILA</span><span class="price-val">$110</span></div></li>
-                <li class="item-row"><div class="item-main"><span class="product-name">Mobil SUPER 2000 X1 10W-40</span><span class="price-val">$87</span></div></li>
-            </ul>
-        </div>
-
         <div class="contact-lorenzo">
-            <p>¿Necesitas ayuda? Contacta a:</p>
+            <p>¿Listo para realizar su pedido?</p>
             <a href="https://wa.me/584245684204" class="whatsapp-btn" target="_blank">
                 <img src="lorenzo.png" alt="Lorenzo" class="lorenzo-logo">
-                Lorenzo Online
+                Hablar con Lorenzo Online
+                <svg class="ws-icon" viewBox="0 0 448 512">
+                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.5-27.4-16.4-14.6-27.5-32.7-30.7-38.2-3.2-5.6-.3-8.6 2.5-11.3 2.5-2.5 5.6-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.6-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                </svg>
             </a>
         </div>
     </div>
@@ -265,7 +300,11 @@
         function toggle(btn) {
             const content = btn.nextElementSibling;
             const isOpen = content.classList.contains('show');
+            
+            // Cerrar otros abiertos
             document.querySelectorAll('.dropdown-content').forEach(c => c.classList.remove('show'));
+            
+            // Abrir el seleccionado
             if (!isOpen) content.classList.add('show');
         }
     </script>
